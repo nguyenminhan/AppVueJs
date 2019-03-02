@@ -1,5 +1,8 @@
 <template>
     <div>
+        <SideBar/>
+        <div class="page-container">
+        <Header />
         <main class="main-content bgc-grey-100">
                     <div id="mainContent">
                         <div class="container-fluid">
@@ -197,5 +200,19 @@
                         </div>
                     </div>
                 </main>
+            <Footer />
+        </div>
     </div>
 </template>
+<script>
+import Header from '../layout/Header.vue';
+import SideBar from '../layout/SideBar.vue';
+import Footer from '../layout/Footer.vue';
+export default {
+    components:{
+        Header,
+        SideBar,
+        Footer
+    }
+}
+</script>

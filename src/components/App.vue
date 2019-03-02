@@ -1,28 +1,35 @@
 <template>
-  <div id="app1">
+  <!-- <div id="app1">
     <SideBar/>
     <div class="page-container">
         <Header />
-        <AddCampaign />
+        <DashBoard />
         <Footer/>
      </div>
+  </div> -->
+
+  <div id="app">
+    <router-view />
   </div>
 </template>
 
 <script>
-import Header from './layout/Header.vue';
-import AddCampaign from './view/AddCampaign.vue';
-import SideBar from './layout/SideBar.vue';
-import Footer from './layout/Footer.vue';
+
 
 
 export default {
-  components:{
-    Header,
-    SideBar,
-    AddCampaign,
-    Footer
+  name: 'App',
+  data(){
+    return{
+
+    }
   }
+//   components:{
+//     Header,
+//     SideBar,
+//     DashBoard,
+//     Footer
+//   }
 }
 </script>
 

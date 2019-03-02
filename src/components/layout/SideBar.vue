@@ -25,8 +25,10 @@
                 <li class="nav-item dropdown">
                     <a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-orange-500 ti-layout-list-thumb"></i> </span><span class="title">Campaign</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
                     <ul class="dropdown-menu">
-                        <li><a class="sidebar-link" href="campaign.html">List Campaign</a></li>
-                        <li><a class="sidebar-link" href="add_campaign.html">Add Campaign</a></li>
+                        <!-- <li><a class="sidebar-link" href="campaign.html">List Campaign</a></li> -->
+                        <li><router-link to="/list_campaign">List Campaign</router-link></li> 
+                        <!-- <li><a class="sidebar-link" href="add_campaign.html">Add Campaign</a></li> -->
+                        <li><router-link to="/add_campaign">Add Campaign</router-link></li> 
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
