@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <!-- <div> -->
         <!-- <SideBar/> -->
         <!-- <div class="page-container"> -->
         <!-- <Header /> -->
@@ -178,7 +178,7 @@
                 </main>
             <!-- <Footer/> -->
         <!-- </div> -->
-        </div>
+        <!-- </div> -->
 </template>
 
 <script>

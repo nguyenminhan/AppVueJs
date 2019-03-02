@@ -9,11 +9,13 @@
   </div> -->
 
   <div id="app">
+    <div>
     <SideBar />
-    <div class="page-container">
-      <Header />
-      <router-view />
-      <Footer />
+      <div class="page-container">
+        <Header />
+        <router-view />
+        <Footer />
+      </div>
     </div>
   </div>
 </template>

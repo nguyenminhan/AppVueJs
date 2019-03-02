@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <!-- <div> -->
         <!-- <SideBar/> -->
-        <div class="page-container">
+        <!-- <div class="page-container"> -->
         <!-- <Header /> -->
         <main class="main-content bgc-grey-100">
                     <div id="mainContent">
@@ -77,7 +77,7 @@
                 </main>
             <!-- <Footer /> -->
         <!-- </div> -->
-    </div>
+    <!-- </div> -->
 </template>
 <script>
 // import Header from '../layout/Header.vue';
