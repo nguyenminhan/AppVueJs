@@ -1,8 +1,8 @@
 <template>
     <div>
-        <SideBar/>
+        <!-- <SideBar/> -->
         <div class="page-container">
-        <Header />
+        <!-- <Header /> -->
         <main class="main-content bgc-grey-100">
                     <div id="mainContent">
                         <div class="container-fluid">
@@ -53,24 +53,7 @@
                                             <tfoot>
                                                 <tr><th rowspan="1" colspan="1">Campaign Code</th><th rowspan="1" colspan="1">Campaign Title</th><th rowspan="1" colspan="1">Coupon description</th><th style="width:110px" rowspan="1" colspan="1">Status</th><th rowspan="1" colspan="1">Coupons</th><th rowspan="1" colspan="1">Start date</th><th rowspan="1" colspan="1">End date</th><th rowspan="1" colspan="1">Action</th></tr>
                                             </tfoot>
-                                            <tbody>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+                                            <tbody>                                          
                                             <tr role="row" class="odd">
                                                     <td class="sorting_1">P_20190131_5</td>
                                                     <td><a href="detail_campaign.html">シーバメルティちいさな贅沢 各種</a></td>
@@ -80,119 +63,11 @@
                                                     <td>2018-01-25</td>
                                                     <td>2019-04-30</td>
                                                     <td>
-                                                        <a href="edit_campaign.html"><i title="edit campaign" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                        <a href="add_coupon.html"><i title="add coupon" class="fas fa-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
+                                                        <a href="edit_campaign.html"><i title="edit campaign" class="icon-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
+                                                        <a href="add_coupon.html"><i title="add coupon" class="icon-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
                                                     </td>
-                                                </tr><tr role="row" class="even">
-                                                    <td class="sorting_1">P_20190131_5</td>
-                                                    <td><a href="detail_campaign.html">シーバメルティちいさな贅沢 各種</a></td>
-                                                    
-                                                    <td>シーバメルティちいさな贅沢 各種</td>
-                                                    <td>OPEN</td>
-                                                    <td class="ta-c"><a href="coupon.html">3</a></td>
-                                                    <td>2018-01-25</td>
-                                                    <td>2019-04-30</td>
-                                                    <td>
-                                                        <a href="edit_campaign.html"><i title="edit campaign" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                        <a href="add_coupon.html"><i title="add coupon" class="fas fa-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
-                                                    </td>
-                                                </tr><tr role="row" class="odd">
-                                                    <td class="sorting_1">P_20190131_5</td>
-                                                    <td><a href="detail_campaign.html">シーバメルティちいさな贅沢 各種</a></td>
-                                                    <td>シーバメルティちいさな贅沢 各種</td>
-                                                    <td>CLOSE</td>
-                                                    <td class="ta-c"><a href="coupon.html">3</a></td>
-                                                    <td>2018-01-25</td>
-                                                    <td>2019-04-30</td>
-                                                    <td>
-                                                        <a href="edit_campaign.html"><i title="edit campaign" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                        <a href="add_coupon.html"><i title="add coupon" class="fas fa-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
-                                                    </td>
-                                                </tr><tr role="row" class="even">
-                                                    <td class="sorting_1">P_20190131_5</td>
-                                                    <td><a href="detail_campaign.html">シーバメルティちいさな贅沢 各種</a></td>
-                                                    <td>シーバメルティちいさな贅沢 各種</td>
-                                                    <td>CLOSE</td>
-                                                    <td class="ta-c"><a href="coupon.html">3</a></td>
-                                                    <td>2018-01-25</td>
-                                                    <td>2019-04-30</td>
-                                                    <td>
-                                                        <a href="edit_campaign.html"><i title="edit campaign" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                        <a href="add_coupon.html"><i title="add coupon" class="fas fa-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
-                                                    </td>
-                                                </tr><tr role="row" class="odd">
-                                                    <td class="sorting_1">P_20190131_5</td>
-                                                    <td><a href="detail_campaign.html">シーバメルティちいさな贅沢 各種</a></td>
-                                                    <td>シーバメルティちいさな贅沢 各種</td>
-                                                    <td>CLOSE</td>
-                                                    <td class="ta-c"><a href="coupon.html">3</a></td>
-                                                    <td>2018-01-25</td>
-                                                    <td>2019-04-30</td>
-                                                    <td>
-                                                        <a href="edit_campaign.html"><i title="edit campaign" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                        <a href="add_coupon.html"><i title="add coupon" class="fas fa-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
-                                                    </td>
-                                                </tr><tr role="row" class="even">
-                                                    <td class="sorting_1">P_20190131_5</td>
-                                                    <td><a href="detail_campaign.html">シーバメルティちいさな贅沢 各種</a></td>
-                                                    <td>シーバメルティちいさな贅沢 各種</td>
-                                                    <td>OPEN</td>
-                                                    <td class="ta-c"><a href="coupon.html">3</a></td>
-                                                    <td>2018-01-25</td>
-                                                    <td>2019-04-30</td>
-                                                    <td>
-                                                        <a href="edit_campaign.html"><i title="edit campaign" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                        <a href="add_coupon.html"><i title="add coupon" class="fas fa-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
-                                                    </td>
-                                                </tr><tr role="row" class="odd">
-                                                    <td class="sorting_1">P_20190131_5</td>
-                                                    <td><a href="detail_campaign.html">シーバメルティちいさな贅沢 各種</a></td>
-                                                    <td>シーバメルティちいさな贅沢 各種</td>
-                                                    <td>OPEN</td>
-                                                    <td class="ta-c"><a href="coupon.html">3</a></td>
-                                                    <td>2018-01-25</td>
-                                                    <td>2019-04-30</td>
-                                                    <td>
-                                                        <a href="edit_campaign.html"><i title="edit campaign" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                        <a href="add_coupon.html"><i title="add coupon" class="fas fa-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
-                                                    </td>
-                                                </tr><tr role="row" class="even">
-                                                    <td class="sorting_1">P_20190131_5</td>
-                                                    <td><a href="detail_campaign.html">シーバメルティちいさな贅沢 各種</a></td>
-                                                    <td>シーバメルティちいさな贅沢 各種</td>
-                                                    <td>OPEN</td>
-                                                    <td class="ta-c"><a href="coupon.html">3</a></td>
-                                                    <td>2018-01-25</td>
-                                                    <td>2019-04-30</td>
-                                                    <td>
-                                                        <a href="edit_campaign.html"><i title="edit campaign" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                        <a href="add_coupon.html"><i title="add coupon" class="fas fa-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
-                                                    </td>
-                                                </tr><tr role="row" class="odd">
-                                                    <td class="sorting_1">P_20190131_5</td>
-                                                    <td><a href="detail_campaign.html">シーバメルティちいさな贅沢 各種</a></td>
-                                                    <td>シーバメルティちいさな贅沢 各種</td>
-                                                    <td>OPEN</td>
-                                                    <td class="ta-c"><a href="coupon.html">3</a></td>
-                                                    <td>2018-01-25</td>
-                                                    <td>2019-04-30</td>
-                                                    <td>
-                                                        <a href="edit_campaign.html"><i title="edit campaign" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                        <a href="add_coupon.html"><i title="add coupon" class="fas fa-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
-                                                    </td>
-                                                </tr><tr role="row" class="even">
-                                                    <td class="sorting_1">P_20190131_5</td>
-                                                    <td><a href="detail_campaign.html">シーバメルティちいさな贅沢 各種</a></td>
-                                                    <td>シーバメルティちいさな贅沢 各種</td>
-                                                    <td>OPEN</td>
-                                                    <td class="ta-c"><a href="coupon.html">3</a></td>
-                                                    <td>2018-01-25</td>
-                                                    <td>2019-04-30</td>
-                                                    <td>
-                                                        <a href="edit_campaign.html"><i title="edit campaign" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                        <a href="add_coupon.html"><i title="add coupon" class="fas fa-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
-                                                    </td>
-                                                </tr></tbody>
+                                                </tr>
+                                                </tbody>
                                         </table><div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing 1 to 10 of 17 entries</div><div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate"><a class="paginate_button previous disabled" aria-controls="dataTable" data-dt-idx="0" tabindex="0" id="dataTable_previous">Previous</a><span><a class="paginate_button current" aria-controls="dataTable" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="dataTable" data-dt-idx="2" tabindex="0">2</a></span><a class="paginate_button next" aria-controls="dataTable" data-dt-idx="3" tabindex="0" id="dataTable_next">Next</a></div></div>
                                     </div>
                                 </div>
@@ -200,19 +75,19 @@
                         </div>
                     </div>
                 </main>
-            <Footer />
-        </div>
+            <!-- <Footer /> -->
+        <!-- </div> -->
     </div>
 </template>
 <script>
-import Header from '../layout/Header.vue';
-import SideBar from '../layout/SideBar.vue';
-import Footer from '../layout/Footer.vue';
-export default {
-    components:{
-        Header,
-        SideBar,
-        Footer
-    }
-}
+// import Header from '../layout/Header.vue';
+// import SideBar from '../layout/SideBar.vue';
+// import Footer from '../layout/Footer.vue';
+// export default {
+//     components:{
+//         Header,
+//         SideBar,
+//         Footer
+//     }
+// }
 </script>

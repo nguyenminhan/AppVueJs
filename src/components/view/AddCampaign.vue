@@ -1,8 +1,8 @@
 <template>
     <div>
-        <SideBar />
-        <div class="page-container">
-            <Header />
+        <!-- <SideBar /> -->
+        <!-- <div class="page-container"> -->
+            <!-- <Header /> -->
             <main class="main-content bgc-grey-100">
                         <div id="mainContent">
                             <h4 class="c-grey-900 mT-10 mB-30">Add Campaign</h4>
@@ -44,21 +44,21 @@
                             </div>
                         </div>
                     </main>
-                <Footer/>
-            </div>
+                <!-- <Footer/> -->
+            <!-- </div> -->
     </div>
 </template>
 
 <script>
-import Header from '../layout/Header.vue';
-import SideBar from '../layout/SideBar.vue';
-import Footer from '../layout/Footer.vue';
+// import Header from '../layout/Header.vue';
+// import SideBar from '../layout/SideBar.vue';
+// import Footer from '../layout/Footer.vue';
 
-export default {
-    components :{
-        Header,
-        SideBar,
-        Footer
-    }
-}
+// export default {
+//     components :{
+//         Header,
+//         SideBar,
+//         Footer
+//     }
+// }
 </script>

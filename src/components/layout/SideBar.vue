@@ -21,18 +21,18 @@
                 </div>
             </div>
             <ul class="sidebar-menu scrollable pos-r ps">
-                <li class="nav-item mT-30"><a class="sidebar-link" href="index.html"><span class="icon-holder"><i class="c-blue-500 ti-home"></i> </span><span class="title">Dashboard</span></a></li>
+                <li class="nav-item mT-30"><router-link tag="a" class="sidebar-link" to="/"><span class="icon-holder"><i class="c-blue-500 icon-home"></i> </span><span class="title">Dashboard</span></router-link></li>
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-orange-500 ti-layout-list-thumb"></i> </span><span class="title">Campaign</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+                    <a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-orange-500  icon-list-ul"></i> </span><span class="title">Campaign</span> <span class="arrow"><i class="icon-angle-right"></i></span></a>
                     <ul class="dropdown-menu">
                         <!-- <li><a class="sidebar-link" href="campaign.html">List Campaign</a></li> -->
-                        <li><router-link to="/list_campaign">List Campaign</router-link></li> 
+                        <li><router-link tag="a" class="sidebar-link" to="/list_campaign">List Campaign</router-link></li> 
                         <!-- <li><a class="sidebar-link" href="add_campaign.html">Add Campaign</a></li> -->
-                        <li><router-link to="/add_campaign">Add Campaign</router-link></li> 
+                        <li><router-link tag="a" class="sidebar-link" to="/add_campaign">Add Campaign</router-link></li> 
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-teal-500 ti-view-list-alt"></i> </span><span class="title">Coupon</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
+                    <a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-teal-500 icon-tasks"></i> </span><span class="title">Coupon</span> <span class="arrow"><i class="icon-angle-right"></i></span></a>
                     <ul class="dropdown-menu">
                         <li><a class="sidebar-link" href="coupon.html">List Coupon</a></li>
                     </ul>

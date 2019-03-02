@@ -1,9 +1,9 @@
 <template>
 
     <div>
-        <SideBar/>
-        <div class="page-container">
-        <Header />
+        <!-- <SideBar/> -->
+        <!-- <div class="page-container"> -->
+        <!-- <Header /> -->
         <main class="main-content bgc-grey-100">
                     <div id="mainContent">
                         <div class="row gap-20 masonry pos-r" style="position: relative; height: 912px;">
@@ -176,21 +176,21 @@
                         </div>
                     </div>
                 </main>
-            <Footer/>
-        </div>
+            <!-- <Footer/> -->
+        <!-- </div> -->
         </div>
 </template>
 
 <script>
-import Header from '../layout/Header.vue';
-import SideBar from '../layout/SideBar.vue';
-import Footer from '../layout/Footer.vue';
-export default {
-    components:{
-        Header,
-        SideBar,
-        Footer
-    }
-}
+// import Header from '../layout/Header.vue';
+// import SideBar from '../layout/SideBar.vue';
+// import Footer from '../layout/Footer.vue';
+// export default {
+//     components:{
+//         Header,
+//         SideBar,
+//         Footer
+//     }
+// }
 </script>
 
