@@ -15,18 +15,18 @@
                                             <form action="">
                                                 <div class="form-group">
                                                     <label for="campaign-code">Campaign Code</label>
-                                                    <input type="text" class="form-control" id="campaign-code" name="campaign_code" placeholder="Campaign Code">
+                                                    <input type="text"  v-model="campaign_code"  class="form-control" id="campaign-code" name="campaign_code" placeholder="Campaign Code">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="campaign-title">Campaign Title</label>
-                                                    <input type="text" class="form-control" id="campaign-title" placeholder="Campaign Title">
+                                                    <input type="text" v-model="campaign_title" name="campaign_title"  class="form-control" id="campaign-title" placeholder="Campaign Title">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="campaign-discription">Campaign Description</label>
-                                                    <textarea class="form-control" id="campaign-discription"></textarea>
+                                                    <textarea class="form-control" v-model="campaign_description" name="campaign_description" id="campaign-discription"></textarea>
                                                 </div>
-                                                <div class="form-group"><label for="start-date">Start date</label> <input type="text" class="form-control bdc-grey-200 start-date" id="start-date" placeholder="yyyy-mm-dd" data-provide="datepicker" data-date-format="yyyy-mm-dd"></div>
-                                                <div class="form-group"><label for="end-date">End date</label> <input type="text" class="form-control bdc-grey-200 end-date" id="end-date" placeholder="yyyy-mm-dd" data-provide="datepicker" data-date-format="yyyy-mm-dd"></div>
+                                                <div class="form-group"><label for="start-date">Start date</label> <input type="text"  v-model="start_date"  class="form-control bdc-grey-200 start-date" id="start-date" placeholder="yyyy-mm-dd" data-provide="datepicker" data-date-format="yyyy-mm-dd"></div>
+                                                <div class="form-group"><label for="end-date">End date</label> <input type="text" v-model="end_date" class="form-control bdc-grey-200 end-date" id="end-date" placeholder="yyyy-mm-dd" data-provide="datepicker" data-date-format="yyyy-mm-dd"></div>
                                                 <div class="form-group"><label for="campaign-picture">Campaign picture:</label> <input type="file" id="campaign-picture" accept="image/png, image/jpeg"></div>
                                                 <div class="form-group">
                                                     <label for="type">Status</label> 
@@ -54,11 +54,36 @@
 // import SideBar from '../layout/SideBar.vue';
 // import Footer from '../layout/Footer.vue';
 
-// export default {
-//     components :{
-//         Header,
-//         SideBar,
-//         Footer
-//     }
-// }
+export default {
+   data: {
+    errors: [],
+    name: null,
+    email: null,
+    movie: null
+  },
+  methods: {
+    checkForm: function (e) {
+      this.errors = [];
+
+      if (!this.name) {
+        this.errors.push("Name required.");
+      }
+      if (!this.email) {
+        this.errors.push('Email required.');
+      } else if (!this.validEmail(this.email)) {
+        this.errors.push('Valid email required.');
+      }
+
+      if (!this.errors.length) {
+        return true;
+      }
+
+      e.preventDefault();
+    },
+    validEmail: function (email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+  }
+}
 </script>
