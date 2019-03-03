@@ -4,16 +4,26 @@ import VueRouter from 'vue-router'
 import {routes} from './routes.js'
 
 import App from './components/App.vue'
+import { Form, HasError, AlertError } from 'vform'
 
-
+import Vuex from 'vuex'
+import storeData from "./store/index"
 
 Vue.use(VueRouter)
 
 // V-form
-import { Form, HasError, AlertError } from 'vform'
+
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
 window.Form = Form;
+
+// Support vuex
+
+Vue.use(Vuex)
+
+const store = new Vuex.Store(
+    storeData
+)
 
 // Sweet alert 2
 import swal from 'sweetalert2'
@@ -39,5 +49,6 @@ const router = new VueRouter({
 new Vue({
   el: '#root',
   router,
+  store,
   render: h => h(App)
 })

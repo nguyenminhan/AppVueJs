@@ -50,7 +50,21 @@
                                         <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="id: activate to sort column descending" style="width: 103px;">id</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="code: activate to sort column ascending" style="width: 111px;">code</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="title: activate to sort column ascending" style="width: 124px;">title</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Campaign code: activate to sort column ascending" style="width: 119px;">Campaign code</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Type: activate to sort column ascending" style="width: 82px;">Type</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Coupon value: activate to sort column ascending" style="width: 105px;">Coupon value</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 84px;">Start date</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="End date: activate to sort column ascending" style="width: 84px;">End date</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 49px;">Status</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Published: activate to sort column ascending" style="width: 77px;">Published</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Used: activate to sort column ascending" style="width: 40px;">Used</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Generated barcode: activate to sort column ascending" style="width: 146px;">Generated barcode</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="action: activate to sort column ascending" style="width: 50px;">action</th></tr>
                                     </thead>
                                     <tfoot>
-                                        <tr><th rowspan="1" colspan="1">id</th><th rowspan="1" colspan="1">code</th><th rowspan="1" colspan="1">title</th><th rowspan="1" colspan="1">Campaign code</th><th rowspan="1" colspan="1">Type</th><th rowspan="1" colspan="1">Coupon value</th><th rowspan="1" colspan="1">Start date</th><th rowspan="1" colspan="1">End date</th><th rowspan="1" colspan="1">Status</th><th rowspan="1" colspan="1">Published</th><th rowspan="1" colspan="1">Used</th><th rowspan="1" colspan="1">Generated barcode</th><th rowspan="1" colspan="1">action</th></tr>
+                                        <tr>
+                                            <th rowspan="1" colspan="1">id</th>
+                                            <th rowspan="1" colspan="1">code</th>
+                                            <th rowspan="1" colspan="1">title</th>
+                                            <th rowspan="1" colspan="1">Campaign code</th>
+                                            <th rowspan="1" colspan="1">Type</th>
+                                            <th rowspan="1" colspan="1">Coupon value</th>
+                                            <th rowspan="1" colspan="1">Start date</th>
+                                            <th rowspan="1" colspan="1">End date</th>
+                                            <th rowspan="1" colspan="1">Status</th>
+                                            <th rowspan="1" colspan="1">Published</th>
+                                            <th rowspan="1" colspan="1">Used</th>
+                                            <th rowspan="1" colspan="1">Generated barcode</th>
+                                            <th rowspan="1" colspan="1">action</th>
+                                        </tr>
                                     </tfoot>
                                     <tbody>                                       
                                         <tr role="row" class="odd">
@@ -65,155 +79,11 @@
                                                 <td>open</td>
                                                 <td>200</td>
                                                 <td>50</td>
-                                                <td><img style="width: 100px" src="assets/static/images/barcode.png"></td>
+                                                <td><img style="width: 100px" src="/static/img/barcode.png"></td>
                                                 <td>
-                                                    <a href="edit_coupon.html"><i title="edit coupon" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
+                                                    <router-link to="/"><i title="edit coupon" class="icon-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></router-link>
                                                 </td>
-                                            </tr><tr role="row" class="even">
-                                                <td class="sorting_1">C_20190131_5</td>
-                                                <td>ABC123XYZ456</td>
-                                                <td style="width:150px">Discount per product 5 %</td>
-                                                <td><a href="detail_campaign.html">P_20190131_5</a></td>
-                                                <td>Discount %</td>
-                                                <td>5%</td>
-                                                <td>2018-01-25</td>
-                                                <td>2019-04-30</td>
-                                                <td>open</td>
-                                                <td>200</td>
-                                                <td>50</td>
-                                                <td><img style="width: 100px" src="assets/static/images/barcode.png"></td>
-                                                <td>
-                                                    <a href="edit_coupon.html"><i title="edit coupon" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                </td>
-                                            </tr><tr role="row" class="odd">
-                                                <td class="sorting_1">C_20190131_5</td>
-                                                <td>ABC123XYZ456</td>
-                                                <td style="width:150px">Discount per product 5 %</td>
-                                                <td><a href="detail_campaign.html">P_20190131_5</a></td>
-                                                <td>Discount %</td>
-                                                <td>5%</td>
-                                                <td>2018-01-25</td>
-                                                <td>2019-04-30</td>
-                                                <td>open</td>
-                                                <td>200</td>
-                                                <td>50</td>
-                                                <td><img style="width: 100px" src="assets/static/images/barcode.png"></td>
-                                                <td>
-                                                    <a href="edit_coupon.html"><i title="edit coupon" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                </td>
-                                            </tr><tr role="row" class="even">
-                                                <td class="sorting_1">C_20190131_5</td>
-                                                <td>ABC123XYZ456</td>
-                                                <td style="width:150px">Discount per product 5 %</td>
-                                                <td><a href="detail_campaign.html">P_20190131_5</a></td>
-                                                <td>Discount %</td>
-                                                <td>5%</td>
-                                                <td>2018-01-25</td>
-                                                <td>2019-04-30</td>
-                                                <td>open</td>
-                                                <td>200</td>
-                                                <td>50</td>
-                                                <td><img style="width: 100px" src="assets/static/images/barcode.png"></td>
-                                                <td>
-                                                    <a href="edit_coupon.html"><i title="edit coupon" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                </td>
-                                            </tr><tr role="row" class="odd">
-                                                <td class="sorting_1">C_20190131_5</td>
-                                                <td>ABC123XYZ456</td>
-                                                <td style="width:150px">Discount per product 5 %</td>
-                                                <td><a href="detail_campaign.html">P_20190131_5</a></td>
-                                                <td>Discount %</td>
-                                                <td>5%</td>
-                                                <td>2018-01-25</td>
-                                                <td>2019-04-30</td>
-                                                <td>open</td>
-                                                <td>200</td>
-                                                <td>50</td>
-                                                <td><img style="width: 100px" src="assets/static/images/barcode.png"></td>
-                                                <td>
-                                                    <a href="edit_coupon.html"><i title="edit coupon" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                </td>
-                                            </tr><tr role="row" class="even">
-                                                <td class="sorting_1">C_20190131_5</td>
-                                                <td>ABC123XYZ456</td>
-                                                <td style="width:150px">Discount per product 5 %</td>
-                                                <td><a href="detail_campaign.html">P_20190131_5</a></td>
-                                                <td>Discount %</td>
-                                                <td>5%</td>
-                                                <td>2018-01-25</td>
-                                                <td>2019-04-30</td>
-                                                <td>open</td>
-                                                <td>200</td>
-                                                <td>50</td>
-                                                <td><img style="width: 100px" src="assets/static/images/barcode.png"></td>
-                                                <td>
-                                                    <a href="edit_coupon.html"><i title="edit coupon" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                </td>
-                                            </tr><tr role="row" class="odd">
-                                                <td class="sorting_1">C_20190131_5</td>
-                                                <td>ABC123XYZ456</td>
-                                                <td style="width:150px">Discount per product 5 %</td>
-                                                <td><a href="detail_campaign.html">P_20190131_5</a></td>
-                                                <td>Discount %</td>
-                                                <td>5%</td>
-                                                <td>2018-01-25</td>
-                                                <td>2019-04-30</td>
-                                                <td>open</td>
-                                                <td>200</td>
-                                                <td>50</td>
-                                                <td><img style="width: 100px" src="assets/static/images/barcode.png"></td>
-                                                <td>
-                                                    <a href="edit_coupon.html"><i title="edit coupon" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                </td>
-                                            </tr><tr role="row" class="even">
-                                                <td class="sorting_1">C_20190131_5</td>
-                                                <td>ABC123XYZ456</td>
-                                                <td style="width:150px">Discount per product 5 %</td>
-                                                <td><a href="detail_campaign.html">P_20190131_5</a></td>
-                                                <td>Discount %</td>
-                                                <td>5%</td>
-                                                <td>2018-01-25</td>
-                                                <td>2019-04-30</td>
-                                                <td>open</td>
-                                                <td>200</td>
-                                                <td>50</td>
-                                                <td><img style="width: 100px" src="assets/static/images/barcode.png"></td>
-                                                <td>
-                                                    <a href="edit_coupon.html"><i title="edit coupon" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                </td>
-                                            </tr><tr role="row" class="odd">
-                                                <td class="sorting_1">C_20190131_5</td>
-                                                <td>ABC123XYZ456</td>
-                                                <td style="width:150px">Discount per product 5 %</td>
-                                                <td><a href="detail_campaign.html">P_20190131_5</a></td>
-                                                <td>Discount %</td>
-                                                <td>5%</td>
-                                                <td>2018-01-25</td>
-                                                <td>2019-04-30</td>
-                                                <td>open</td>
-                                                <td>200</td>
-                                                <td>50</td>
-                                                <td><img style="width: 100px" src="assets/static/images/barcode.png"></td>
-                                                <td>
-                                                    <a href="edit_coupon.html"><i title="edit coupon" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                </td>
-                                            </tr><tr role="row" class="even">
-                                                <td class="sorting_1">C_20190131_5</td>
-                                                <td>ABC123XYZ456</td>
-                                                <td style="width:150px">Discount per product 5 %</td>
-                                                <td><a href="detail_campaign.html">P_20190131_5</a></td>
-                                                <td>Discount %</td>
-                                                <td>5%</td>
-                                                <td>2018-01-25</td>
-                                                <td>2019-04-30</td>
-                                                <td>open</td>
-                                                <td>200</td>
-                                                <td>50</td>
-                                                <td><img style="width: 100px" src="assets/static/images/barcode.png"></td>
-                                                <td>
-                                                    <a href="edit_coupon.html"><i title="edit coupon" class="fas fa-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                </td>
-                                        </tr></tbody>
+                                            </tr></tbody>
                                 </table><div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing 1 to 10 of 11 entries</div><div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate"><a class="paginate_button previous disabled" aria-controls="dataTable" data-dt-idx="0" tabindex="0" id="dataTable_previous">Previous</a><span><a class="paginate_button current" aria-controls="dataTable" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="dataTable" data-dt-idx="2" tabindex="0">2</a></span><a class="paginate_button next" aria-controls="dataTable" data-dt-idx="3" tabindex="0" id="dataTable_next">Next</a></div></div>
                             </div>
                         </div>

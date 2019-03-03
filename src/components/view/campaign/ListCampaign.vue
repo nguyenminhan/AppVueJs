@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="bgc-white bd bdrs-3 p-20 mB-20">
                                         <h4 class="c-grey-900">List Campaign</h4>
-                                        <div class="col-md-12 ta-r mB-10"><a href="add_campaign.html"><button type="button" class="btn btn-primary">Add Campaign</button></a></div>
+                                        <div class="col-md-12 ta-r mB-10"><router-link to="/add_campaign"><button type="button" class="btn btn-primary">Add Campaign</button></router-link></div>
                                         <div id="dataTable_wrapper" class="dataTables_wrapper"><div class="dataTables_length" id="dataTable_length"><label>Show <select name="dataTable_length" aria-controls="dataTable" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="dataTable_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="dataTable"></label></div><table id="dataTable" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
                                             <thead>
                                                 <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Campaign Code: activate to sort column descending" style="width: 201px;">Campaign Code</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Campaign Title: activate to sort column ascending" style="width: 401px;">Campaign Title</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Campaign description: activate to sort column ascending" style="width: 401px;">Campaign description</th><th style="width: 84px;" class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">Status</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Coupons: activate to sort column ascending" style="width: 117px;">Coupons</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 143px;">Start date</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="End date: activate to sort column ascending" style="width: 143px;">End date</th><th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 94px;">Action</th></tr>
@@ -54,17 +54,17 @@
                                                 <tr><th rowspan="1" colspan="1">Campaign Code</th><th rowspan="1" colspan="1">Campaign Title</th><th rowspan="1" colspan="1">Coupon description</th><th style="width:110px" rowspan="1" colspan="1">Status</th><th rowspan="1" colspan="1">Coupons</th><th rowspan="1" colspan="1">Start date</th><th rowspan="1" colspan="1">End date</th><th rowspan="1" colspan="1">Action</th></tr>
                                             </tfoot>
                                             <tbody>                                          
-                                            <tr role="row" class="odd">
-                                                    <td class="sorting_1">P_20190131_5</td>
-                                                    <td><a href="detail_campaign.html">シーバメルティちいさな贅沢 各種</a></td>
-                                                    <td>シーバメルティちいさな贅沢 各種</td>
-                                                    <td>OPEN</td>
+                                            <tr role="row" class="odd" v-for="(campaign,index) in allcampaign" >
+                                                    <td class="sorting_1">{{campaign.code}}</td>
+                                                    <td><a href="detail_campaign.html">{{campaign.title}}</a></td>
+                                                    <td>{{campaign.description}}</td>
+                                                    <td>{{campaign.status}}</td>
                                                     <td class="ta-c"><a href="coupon.html">3</a></td>
-                                                    <td>2018-01-25</td>
-                                                    <td>2019-04-30</td>
+                                                    <td>{{campaign.start_datetime}}</td>
+                                                    <td>{{campaign.end_datetime}}</td>
                                                     <td>
-                                                        <a href="edit_campaign.html"><i title="edit campaign" class="icon-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></a>
-                                                        <a href="add_coupon.html"><i title="add coupon" class="icon-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></a>
+                                                        <router-link to="/edit_campaign"><i title="edit campaign" class="icon-edit" style="color:#00bcd4; font-size: 20px; cursor:pointer"></i></router-link>
+                                                        <router-link to=""><i title="add coupon" class="icon-plus" style="color:#ecdb41; font-size: 20px; cursor:pointer"></i></router-link>
                                                     </td>
                                                 </tr>
                                                 </tbody>
@@ -80,14 +80,34 @@
     <!-- </div> -->
 </template>
 <script>
-// import Header from '../layout/Header.vue';
-// import SideBar from '../layout/SideBar.vue';
-// import Footer from '../layout/Footer.vue';
-// export default {
-//     components:{
-//         Header,
-//         SideBar,
-//         Footer
-//     }
-// }
+
+export default {
+    name: "list_campaign",
+        mounted(){
+            this.$store.dispatch('getAllCampaign')
+           
+        },
+        computed:{
+            allcampaign(){
+                return this.$store.getters.getAllCampaign
+            }
+        },
+        methods:{
+            // ourImage(img){
+            //     return "uploadimage/"+img;
+            // },
+            // deletePost(id){
+            //    axios.get('/delete/'+id)
+            //        .then(()=>{
+            //            this.$store.dispatch('gelAllPost')
+            //            toast({
+            //                type: 'success',
+            //                title: 'Post Deleted successfully'
+            //            })
+            //        })
+            //        .catch(()=>{
+            //        })
+            // }
+        }
+}
 </script>

@@ -34,7 +34,7 @@
                 <li class="nav-item dropdown">
                     <a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-teal-500 icon-tasks"></i> </span><span class="title">Coupon</span> <span class="arrow"><i class="icon-angle-right"></i></span></a>
                     <ul class="dropdown-menu">
-                        <li><a class="sidebar-link" href="coupon.html">List Coupon</a></li>
+                          <li><router-link tag="a" class="sidebar-link" to="/list_coupon">List Coupon</router-link></li> 
                     </ul>
                 </li>
             <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></ul>

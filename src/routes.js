@@ -10,9 +10,9 @@ import EditCampaign from './components/view/campaign/EditCampaign.vue'
 import ListCampaign from './components/view/campaign/ListCampaign.vue'
 
 // coupon
-// import AddCoupon from './components/view/campaign/AddCoupon.vue'
-// import EditCoupon from './components/view/campaign/EditCoupon.vue'
-// import ListCoupon from './components/view/campaign/ListCoupon.vue'
+import AddCoupon from './components/view/coupon/AddCoupon.vue'
+import EditCoupon from './components/view/coupon/EditCoupon.vue'
+import ListCoupon from './components/view/coupon/ListCoupon.vue'
 
 
 // Routes
@@ -40,6 +40,20 @@ export const routes = [
     path:'/edit_campaign/:campaign_id',
     name:'edit_campaign',
     component:EditCampaign
+  },  {
+    path: '/list_coupon',
+    name:'list_coupon',
+    component: ListCoupon
+  },
+  {
+    path: '/add_coupon',
+    name:'add_coupon',
+    component: AddCoupon
+  },
+  {
+    path:'/edit_coupon/:coupon_id',
+    name:'edit_coupon',
+    component:EditCoupon
   }
   
 ]
