@@ -10,8 +10,12 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "sweetalert2": "^8.2.6",
+    "vform": "^1.0.0",
     "vue": "^2.5.11",
-    "vue-router": "^3.0.2"
+    "vue-router": "^3.0.2",
+    "vue-vform": "^1.0.4"
   },
   "browserslist": [
     "> 1%",

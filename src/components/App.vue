@@ -9,15 +9,15 @@
   </div> -->
 
   <div id="app">
-    <div>
+    <!-- <div> -->
     <SideBar />
       <div class="page-container">
         <Header />
         <router-view />
         <Footer />
       </div>
-    </div>
   </div>
+  <!-- </div> -->
 </template>
 
 <script>
