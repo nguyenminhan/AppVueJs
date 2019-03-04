@@ -9,21 +9,24 @@
                 <div class="masonry-item col-md-12" style="position: absolute; left: 0%; top: 0px;">
                     <div class="bgc-white p-20 bd">
                         <h4 class="c-grey-900">New Campaign</h4>
+                         
                         <div class="mT-30">
                             <form action="" @submit.prevent="addCampaign()" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label for="campaign-code">Campaign Code</label>
-                                    <input type="text" class="form-control" id="campaign-code"  v-model="form.campaign_code" name="campaign_code" placeholder="Campaign Code">
-                                </div>
-                                <div class="form-group">
                                     <label for="campaign-title">Campaign Title</label>
-                                    <input type="text" class="form-control" id="campaign-title" v-model="form.campaign_title" placeholder="Campaign Title">
+                                    <input type="text" class="form-control" id="campaign-title" v-model="form.campaign_title" placeholder="Campaign Title" />
+                                 
                                 </div>
                                 <div class="form-group">
                                     <label for="campaign-discription">Campaign Description</label>
-                                    <textarea class="form-control" id="campaign-discription" v-model="form.campaign_description"></textarea>
+                                    <textarea class="form-control" id="campaign-discription" v-model="form.campaign_description" ></textarea>
+                                      <!-- <markdown-editor v-model="form.campaign_description"></markdown-editor> -->
                                 </div>
-                                <div class="form-group"><label for="start-date">Start date</label> <input  type="text" v-model="form.start_date" class="form-control bdc-grey-200 "  placeholder="yyyy-mm-dd"></div>
+                                <div class="form-group">
+                                    <label for="start-date">Start date</label> 
+                                    <input  type="text" v-model="form.start_date" class="form-control bdc-grey-200 "  placeholder="yyyy-mm-dd">
+                                  <!-- <Datepicker></Datepicker> -->
+                                </div>
                                 <div class="form-group"><label for="end-date">End date</label> <input type="text" v-model="form.end_date"  class="form-control bdc-grey-200 " placeholder="yyyy-mm-dd"></div>
                                 <div class="form-group">
                                     <label for="campaign-picture">Campaign picture:</label> 
@@ -59,11 +62,12 @@
 </style>
 <script>
 import axios from 'axios';
+import Datepicker from 'vuejs-datepicker';
 export default {
     data(){
         return{
+            // errors: [],
             form: new Form({
-                campaign_code:'',
                 campaign_title:'',
                 campaign_description:'',
                 start_date:'',
@@ -72,6 +76,10 @@ export default {
                 status:''
             })
         }
+    },
+
+    components:{
+        Datepicker
     },
      methods:{
             changePhoto(event){
@@ -94,7 +102,9 @@ export default {
                 //  }
             },
             addCampaign(){
-                this.$router.push('/add_coupon');
+                // this.errors = [];
+                // console.log( this.form);
+                // this.$router.push('/add_coupon');
             //     let config = {
             //     headers: {
             //         'Accept' : 'application/json',
@@ -115,17 +125,36 @@ export default {
 
                 //     })
                     
-                
-            //   axios.post('http://127.0.0.1:8000/api/campagin',this.form,config)
-            //             .then(response=>{
-            //                 console.log(response);
-            //             this.$router.push('/add_coupon')
-            //             toast({
-            //                 type: 'success',
-            //                 title: 'Post Added successfully'
-            //             })
-            //         })
+                // if (this.form.campaign_title === '') {
+                //     this.errors.push('Campaign title name is required.');
+                // }
+                // if(this.form.campaign_description ){
+                //     this.errors.push('Campaign description is required.');
+                // }
+                // if(this.form.start_date ){
+                //     this.errors.push('Start date is required.');
+                // }
+                // if(this.form.end_date ){
+                //     this.errors.push('End date is required.');
+                // }
+                // if(this.form.photo ){
+                //     this.errors.push('Photo is required.');
+                // }
+                // if(this.form.status ){
+                //     this.errors.push('Status is required.');
+                // }
+                       axios.post('http://127.0.0.1:7000/api/add_campaign',this.form)
+                        .then(response=>{
+                            // console.log(response.data.data.id);
+                        this.$router.push('/add_coupon')
+                        // toast({
+                        //     type: 'success',
+                        //     title: 'Campaign Added successfully'
+                        // })
+                    })
+                }
+           
             }
-        }
+        
 }
 </script>

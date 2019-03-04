@@ -11,26 +11,26 @@
                     <div class="bgc-white p-20 bd">
                         <h4 class="c-grey-900">New coupon</h4>
                         <div class="mT-30">
-                            <form action="">
+                            <form action="" @submit.prevent="addCouponByCampaignID()" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="campaign-code">Campaign code:</label> 
-                                    <input type="text" class="form-control" id="campaign-code" value="P_20190131_5" disabled="">
+                                    <input type="text" class="form-control" id="campaign-code" value="HAl8aGzfD05c7cfe"   disabled="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="campaign-name">Campaign:</label> 
-                                    <input type="text" class="form-control" id="campaign-name" value="シーバメルティちいさな贅沢 各種" disabled="">
+                                    <label for="campaign-title">Campaign title:</label> 
+                                    <input type="text" class="form-control" id="campaign-title" value="title"  disabled="">
                                 </div>
                                 <div class="form-group">
                                     <label for="coupon-title">Coupon title:</label> 
-                                    <input type="text" class="form-control" id="coupon-title" placeholder="">
+                                    <input type="text" class="form-control" name="coupon_title"   id="coupon-title" placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label for="campaign-discription">Coupon Discription</label>
-                                    <textarea class="form-control" id="coupon-discription"></textarea>
+                                    <textarea class="form-control"  id="coupon-discription"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="coupon-type">Type</label> 
-                                    <select id="coupon-type" name="type" class="form-control">
+                                    <select id="coupon-type" name="type" class="form-control" >
                                         <option>added value %</option>
                                         <option>added value ¥</option>
                                         <option>added value point</option>
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="coupon-value">Coupon value:</label> 
-                                    <input type="text" class="form-control" id="coupon-value" placeholder="">
+                                    <input type="text" class="form-control"  id="coupon-value" placeholder="">
                                 </div>
                                 <div class="form-group">
                                     <label for="quota">Quota:</label> 
@@ -49,31 +49,40 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="start-date">Start date</label> 
-                                    <input type="text" class="form-control bdc-grey-200 start-date" id="start-date" placeholder="yyyy-mm-dd" data-provide="datepicker" data-date-format="yyyy-mm-dd">
+                                    <input type="text" class="form-control bdc-grey-200 "  placeholder="yyyy-mm-dd">
                                 </div>
                                 <div class="form-group">
                                     <label for="end-date">End date</label> 
-                                    <input type="text" class="form-control bdc-grey-200 end-date" id="end-date" placeholder="yyyy-mm-dd" data-provide="datepicker" data-date-format="yyyy-mm-dd">
+                                    <input type="text" class="form-control bdc-grey-200 "   placeholder="yyyy-mm-dd" >
                                 </div>
                                 <div class="form-group">
                                     <label for="eyecatch-picture">Eyecatch picture:</label> 
                                     <br>
                                     <input type="file" id="eyecatch-picture" accept="image/png, image/jpeg">
+                                    <!-- <input @change="changePhoto($event)" type="file" name="photo" id="campaign-picture" accept="image/png, image/jpeg"> -->
+                                    <!-- <img :src="photo" alt="" width="80" height="80"> -->
                                 </div>
                                 <div class="form-group">
                                     <label for="other-picture-1">Other picture 1:</label> 
                                     <br>
                                     <input type="file" id="campaign-picture" accept="image/png, image/jpeg">
+                                     
+                                     <!-- <input @change="changePhoto1($event)" type="file" name="photo1"  accept="image/png, image/jpeg"> -->
+                                    <!-- <img :src="photo1" alt="" width="80" height="80"> -->
                                 </div>
                                 <div class="form-group">
                                     <label for="other-picture-2">Other picture 2:</label> 
                                     <br>
                                     <input type="file" id="other-picture-2" accept="image/png, image/jpeg">
+                                  
+
                                 </div>
                                 <div class="form-group">
                                     <label for="other-picture-3">Other picture 3:</label> 
                                     <br>
                                     <input type="file" id="other-picture-3" accept="image/png, image/jpeg">
+                                    <!-- <input @change="changePhoto3($event)" type="file" name="photo3"  accept="image/png, image/jpeg"> -->
+                                    <!-- <img :src="form.photo3" alt="" width="80" height="80"> -->
                                 </div>
                                 <div class="form-group">
                                     <label for="init-status">Status</label> 
@@ -83,7 +92,7 @@
                                         <option>Close</option>
                                     </select>
                                 </div>
-                                <center><button type="button" class="btn btn-primary" >Create</button></center>
+                                <center><button type="submit" class="btn btn-primary" >Create</button></center>
                             </form>
                         </div>
                     </div>
@@ -92,6 +101,72 @@
         </div>
     </main>
 </template>
+<script>
+export default {
+     name: "add_coupon",
+        data(){
+            return{
+              
+                // errors: [],
+                // form: new Form({
+                //     // coupon_title:'',
+                //     coupon_description:'',
+                //     coupon_type:'',
+                //     coupon_value:'',
+                //     coupon_quota:'',
+                //     start_date:'',
+                //     end_date:'',
+                //     photo:'',
+                //     photo1:'',
+                //     photo2:'',
+                //     photo3:'',
+                //     status:''
+                // })
+            }
+    },
+
+    // created(){
+    //         axios.get(`post/${this.$route.params.campaignid}`)
+    //             .then((response)=>{
+    //                 console.log(response.data)
+    //                 this.form.fill(response.data.post)
+    //             })
+
+    // },
+    // computed:{
+    //         getCampaginByID(){
+    //             return this.$store.getters.getCampaignByID
+    //         }
+    // },
+    methods:{
+        //  changePhoto1(event){
+        //         let file = event.target.files[0];
+            
+        //         //  if(file.size > 1048576){
+        //         //      toast({
+        //         //          type: 'error',
+        //         //          title: 'Oops...',
+        //         //          text: 'Something went wrong!',
+        //         //          footer: '<a href>Why do I have this issue?</a>'
+        //         //      })
+        //         //  }else{
+        //              let reader = new FileReader();
+                    
+        //              reader.onload = event => {
+        //                  photo1 = event.target.result
+        //              };
+        //              reader.readAsDataURL(file);
+        //         //  }
+        // },
+        addCouponByCampaignID(){
+                    // console.log(this.form);
+        }
+    }
+}
+</script>
+
+
+
 <style>
 
 .wizard-2{

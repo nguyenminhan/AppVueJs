@@ -57,42 +57,31 @@
                                             <div class="layers">
                                                 <div class="layer w-100">
                                                     <div class="peers pT-20 mT-20 fxw-nw@lg+ jc-sb ta-c gap-10">
-                                                        <div class="peer">
+                                                        <!-- <div class="peer">
                                                             <div class="easy-pie-chart" data-size="130" data-percent="75" data-bar-color="#f44336"><span>75 %</span></div>
                                                             <h6 class="fsz-sm">New Users</h6>
-                                                        </div>
-                                                        <div class="peer">
-                                                            <div class="easy-pie-chart" data-size="130" data-percent="50" data-bar-color="#2196f3"><span>50 %</span></div>
-                                                            <h6 class="fsz-sm">New Purchases</h6>
-                                                        </div>
-                                                        <div class="peer">
-                                                            <div class="easy-pie-chart" data-size="130" data-percent="90" data-bar-color="#ff9800"><span>90 %</span></div>
-                                                            <h6 class="fsz-sm">Bounce Rate</h6>
-                                                        </div>
-                                                        <div class="peer">
-                                                            <div class="easy-pie-chart" data-size="130" data-percent="90" data-bar-color="#ff9800"><span>90 %</span></div>
-                                                            <h6 class="fsz-sm">Bounce Rate</h6>
-                                                        </div>
+                                                        </div>                   -->
+                                                         <DoughnutChart 
+                                                            :percent="percent" 
+                                                            :visibleValue="true" 
+                                                            foregroundColor="purple"
+                                                            emptyText="N/A"/>
+                                                              
+                                                            
                                                     </div>
                                                 </div>
                                                 <div class="layer w-100">
                                                     <div class="peers pT-20 mT-20 fxw-nw@lg+ jc-sb ta-c gap-10">
-                                                        <div class="peer">
+                                                        <!-- <div class="peer">
                                                             <div class="easy-pie-chart" data-size="130" data-percent="75" data-bar-color="#f44336"><span>75 %</span></div>
                                                             <h6 class="fsz-sm">New Users</h6>
-                                                        </div>
-                                                        <div class="peer">
-                                                            <div class="easy-pie-chart" data-size="130" data-percent="50" data-bar-color="#2196f3"><span>50 %</span></div>
-                                                            <h6 class="fsz-sm">New Purchases</h6>
-                                                        </div>
-                                                        <div class="peer">
-                                                            <div class="easy-pie-chart" data-size="130" data-percent="90" data-bar-color="#ff9800"><span>90 %</span></div>
-                                                            <h6 class="fsz-sm">Bounce Rate</h6>
-                                                        </div>
-                                                        <div class="peer">
-                                                            <div class="easy-pie-chart" data-size="130" data-percent="90" data-bar-color="#ff9800"><span>90 %</span></div>
-                                                            <h6 class="fsz-sm">Bounce Rate</h6>
-                                                        </div>
+                                                        </div>  -->
+                                                          <DoughnutChart 
+                                                            :percent="percent" 
+                                                            :visibleValue="true" 
+                                                            foregroundColor="purple"
+                                                            emptyText="N/A"/>  
+                                                                                                               
                                                     </div>
                                                 </div>
                                             </div>
@@ -182,15 +171,15 @@
 </template>
 
 <script>
-// import Header from '../layout/Header.vue';
-// import SideBar from '../layout/SideBar.vue';
-// import Footer from '../layout/Footer.vue';
-// export default {
-//     components:{
-//         Header,
-//         SideBar,
-//         Footer
-//     }
-// }
+import DoughnutChart from './DoughnutChart.vue'
+export default {
+    components:{
+        DoughnutChart
+    },
+    data() {
+    return {
+      percent: 25
+    }
+  }
+}
 </script>
-

@@ -6,6 +6,13 @@ import {routes} from './routes.js'
 import App from './components/App.vue'
 import { Form, HasError, AlertError } from 'vform'
 
+
+// editor support
+import 'v-markdown-editor/dist/index.css';
+import Editor from 'v-markdown-editor'
+Vue.use(Editor);
+
+
 import Vuex from 'vuex'
 import storeData from "./store/index"
 
