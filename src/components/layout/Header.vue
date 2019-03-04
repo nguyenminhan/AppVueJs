@@ -2,9 +2,7 @@
     <div class="header navbar">
         <div class="header-container">
             <ul class="nav-left">
-                <li><a id="sidebar-toggle" class="sidebar-toggle" href="javascript:void(0);"><i class="icon-align-justify"></i></a></li>
-                <li class="search-box"><a class="search-toggle no-pdd-right" href="javascript:void(0);"><i class="search-icon  icon-search pdd-right-10"></i> <i class="search-icon-close icon-remove pdd-right-10"></i></a></li>
-                <li class="search-input"><input class="form-control" type="text" placeholder="Search..."></li>
+                <li><a id="sidebar-toggle" class="sidebar-toggle" href="javascript:void(0);"><i class="ti-menu"></i></a></li>
             </ul>
             <ul class="nav-right">
                 <li class="dropdown">

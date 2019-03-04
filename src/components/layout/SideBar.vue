@@ -21,9 +21,9 @@
                 </div>
             </div>
             <ul class="sidebar-menu scrollable pos-r ps">
-                <li class="nav-item mT-30"><router-link tag="a" class="sidebar-link" to="/"><span class="icon-holder"><i class="c-blue-500 icon-home"></i> </span><span class="title">Dashboard</span></router-link></li>
+                <li class="nav-item mT-30"><router-link tag="a" class="sidebar-link" to="/"><span class="icon-holder"><i class="c-blue-500 ti-home"></i> </span><span class="title">Dashboard</span></router-link></li>
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-orange-500  icon-list-ul"></i> </span><span class="title">Campaign</span> <span class="arrow"><i class="icon-angle-right"></i></span></a>
+                    <a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-orange-500 ti-layout-list-thumb"></i> </span><span class="title">Campaign</span> <span class="arrow"><i class="icon-angle-right"></i></span></a>
                     <ul class="dropdown-menu">
                         <!-- <li><a class="sidebar-link" href="campaign.html">List Campaign</a></li> -->
                         <li><router-link tag="a" class="sidebar-link" to="/list_campaign">List Campaign</router-link></li> 
@@ -32,7 +32,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-teal-500 icon-tasks"></i> </span><span class="title">Coupon</span> <span class="arrow"><i class="icon-angle-right"></i></span></a>
+                    <a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-teal-500 ti-view-list-alt"></i> </span><span class="title">Coupon</span> <span class="arrow"><i class="icon-angle-right"></i></span></a>
                     <ul class="dropdown-menu">
                           <li><router-link tag="a" class="sidebar-link" to="/list_coupon">List Coupon</router-link></li> 
                     </ul>
