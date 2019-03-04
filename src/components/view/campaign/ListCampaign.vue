@@ -79,6 +79,11 @@
         <!-- </div> -->
     <!-- </div> -->
 </template>
+<style type="text/css">
+    #dataTable_filter{
+        display: none!important;
+    }
+</style>
 <script>
 
 export default {

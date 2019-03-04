@@ -1,12 +1,15 @@
 <template>
     <main class="main-content bgc-grey-100">
         <div id="mainContent">
-            <h4 class="c-grey-900 mT-10 mB-30">Add Campaign <i class=" icon-double-angle-right"> Add Coupon</i></h4>
+            <div class="wizard-cam pagin col-md-12 pL-0">
+                <div class="wizard-2 ta-c"><h4 class="c-grey-900 mT-10 mB-30">Add Campaign</h4></div>
+                <div class="wizard-3 ta-c"><h4 class="c-grey-900 mT-10 mB-30">Add Coupon</h4></div>
+            </div>
             <div class="row gap-20 masonry pos-r" style="position: relative; height: 1257px;">
                 <div class="masonry-sizer col-md-6"></div>
                 <div class="masonry-item col-md-12" style="position: absolute; left: 0%; top: 0px;">
                     <div class="bgc-white p-20 bd">
-                        <h6 class="c-grey-900">New coupon</h6>
+                        <h4 class="c-grey-900">New coupon</h4>
                         <div class="mT-30">
                             <form action="">
                                 <div class="form-group">
@@ -89,6 +92,36 @@
         </div>
     </main>
 </template>
+<style>
+
+.wizard-2{
+    background: #bfe2f5;
+    width: 160px;
+    display: table-cell;
+}
+.wizard-3{
+    background: #89d4fd;
+    width: 160px;
+    display: table-cell;
+}
+.wizard-2{
+    position:relative;
+}
+.wizard-cam pagin{
+    display: -webkit-box !important;
+    height: 50px!important;
+}
+    .wizard-2 :before{
+        content: "\A";
+        border-style: solid;
+        height: 50px;
+        border-width: 29px 12px 20px 12px;
+        border-color: transparent transparent transparent #bfe2f5;
+        position: absolute;
+        right: -24px;
+        top: 0px;
+    }
+    </style>
 <script>
 export default {
     
