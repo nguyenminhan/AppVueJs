@@ -94,6 +94,7 @@ export default {
         },
         computed:{
             allcampaign(){
+                console.log(this.$store.getters.getAllCampaign)
                 return this.$store.getters.getAllCampaign
             }
         },

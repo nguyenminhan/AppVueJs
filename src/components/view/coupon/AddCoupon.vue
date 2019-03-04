@@ -1,15 +1,16 @@
 <template>
     <main class="main-content bgc-grey-100">
         <div id="mainContent">
-            <div class="wizard-cam pagin col-md-12 pL-0">
-                <div class="wizard-2 ta-c"><h4 class="c-grey-900 mT-10 mB-30">Add Campaign</h4></div>
-                <div class="wizard-3 ta-c"><h4 class="c-grey-900 mT-10 mB-30">Add Coupon</h4></div>
+            <div class="wizard-campagin col-md-12 pL-0">
+                <div class="wizard-1 ta-c"><h4 class="c-grey-900 mT-10 mB-30">Add Campaign</h4></div>
+                <div class="wizard-2 ta-c"><h4 class="c-grey-900 mT-10 mB-30">Add Coupon</h4></div>
+                <div class="wizard-3 ta-c"><h4 class="c-grey-900 mT-10 mB-30">Confirm</h4></div>
+                <div class="wizard-4 ta-c"><h4 class="c-grey-900 mT-10 mB-30">Finish</h4></div>
             </div>
             <div class="row gap-20 masonry pos-r" style="position: relative; height: 1257px;">
                 <div class="masonry-sizer col-md-6"></div>
                 <div class="masonry-item col-md-12" style="position: absolute; left: 0%; top: 0px;">
                     <div class="bgc-white p-20 bd">
-                        <h4 class="c-grey-900">New coupon</h4>
                         <div class="mT-30">
                             <form action="" @submit.prevent="addCouponByCampaignID()" enctype="multipart/form-data">
                                 <div class="form-group">
@@ -47,13 +48,24 @@
                                     <label for="quota">Quota:</label> 
                                     <input type="text" class="form-control" id="quota" placeholder="">
                                 </div>
-                                <div class="form-group">
+                               <!--  <div class="form-group">
                                     <label for="start-date">Start date</label> 
                                     <input type="text" class="form-control bdc-grey-200 "  placeholder="yyyy-mm-dd">
                                 </div>
                                 <div class="form-group">
                                     <label for="end-date">End date</label> 
                                     <input type="text" class="form-control bdc-grey-200 "   placeholder="yyyy-mm-dd" >
+                                </div> -->
+
+                                <div class="col-md-12 p-0">
+                                    <div class="form-group col-md-6 p-0" style="float:left">
+                                        <label for="start-date">Start date</label> 
+                                        <input  type="text" class="form-control input-date"  placeholder="yyyy-mm-dd">
+                                    </div>
+                                    <div class="form-group col-md-6 p-0" style="float:left">
+                                        <label for="end-date">End date</label>
+                                        <input type="text"  class="form-control input-date" placeholder="yyyy-mm-dd">
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="eyecatch-picture">Eyecatch picture:</label> 
@@ -166,43 +178,61 @@ export default {
 </script>
 
 
-
-<style>
-
-.wizard-2{
+<style scoped>
+.wizard-1{
     background: #bfe2f5;
     width: 160px;
     display: table-cell;
 }
-.wizard-3{
-    background: #89d4fd;
+.wizard-2,.wizard-3,.wizard-4{
+    background: #bfe2f5;
     width: 160px;
-    display: table-cell;
+    display: block;
+    margin-left: 25px
 }
 .wizard-2{
+    background: #89d4fd;
+}
+.wizard-1,.wizard-2,.wizard-3,.wizard-4{
     position:relative;
 }
-.wizard-cam pagin{
+.wizard-campagin{
     display: -webkit-box !important;
     height: 50px!important;
 }
-    .wizard-2 :before{
-        content: "\A";
-        border-style: solid;
-        height: 50px;
-        border-width: 29px 12px 20px 12px;
-        border-color: transparent transparent transparent #bfe2f5;
-        position: absolute;
-        right: -24px;
-        top: 0px;
-    }
-    </style>
-<script>
+.wizard-2 :before,.wizard-3 :before,.wizard-4 :before{
+    content: "\A";
+    border-style: solid;
+    height: 50px;
+    border-width: 29px 12px 20px 12px;
+    border-color: #bfe2f5 #bfe2f5 #bfe2f5 transparent;
+    position: absolute;
+    left: -13px;
+    top: 0px;
+}
+.wizard-1 :after,.wizard-2 :after,.wizard-3 :after,.wizard-4:after{
+    content: "\A";
+    border-style: solid;
+    height: 50px;
+    border-width: 29px 12px 20px 12px;
+    border-color: transparent transparent transparent #bfe2f5;
+    position: absolute;
+    right: -24px;
+    top: 0px;
+}
+.wizard-2 :after{
+    border-color: transparent transparent transparent #89d4fd;
+}
+.wizard-2 :before{
+    border-color: #89d4fd #89d4fd #89d4fd transparent;
+}
+
+.input-date{
+    width:200px;
+}
+</style>
 export default {
     
 }
 </script>
-<style scoped>
-    
-</style>
 
