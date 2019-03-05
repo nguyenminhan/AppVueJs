@@ -79,9 +79,14 @@
         <!-- </div> -->
     <!-- </div> -->
 </template>
-<style type="text/css">
+<style scoped>
     #dataTable_filter{
         display: none!important;
+    },
+    @media (min-width: 576px) {
+        .form-inline .form-control {
+            width: inherit !important;
+        }
     }
 </style>
 <script>
