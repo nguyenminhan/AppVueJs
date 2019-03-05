@@ -29,7 +29,7 @@
                                         <label for="end_filter" class="col-xs-5">End before</label>
                                         <input class="form-control form-input col-xs-7" type="text" id="end_filter" placeholder="End before" name="end_filter" value="" data-provide="datepicker" data-date-format="yyyy-mm-dd">
                                     </div>
-                                    <div class="col-md-2 col-sm-6 form-group">
+                                    <div class="col-md-1 col-sm-6 form-group">
                                         <label for="status" class="col-xs-5">Status</label>
                                         <select id="status" name="status" class="form-control form-input col-xs-7" style="width:150px">
                                             <option value="">ALL</option>
@@ -38,8 +38,8 @@
                                             <option value="">CLOSE</option>
                                         </select>
                                     </div>
-                                    <div style="width: 100%; margin-top: 20px">
-                                        <center><button type="submit" class="btn btn-info" id="submit">filter</button></center>
+                                    <div class="col-md-1 col-sm-6 form-group mT-20 text-center">
+                                        <button type="submit" class="btn btn-info" id="submit">filter</button>
                                     </div>
                                 </form>
                             </div>
